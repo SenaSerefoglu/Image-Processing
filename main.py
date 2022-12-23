@@ -4,7 +4,7 @@ import numpy as np
 
 def IntensityLevelSlicing():
     # Load the image
-    image = Image.open('image.jpg')
+    image = Image.open('image.png')
 
     # Convert the image to grayscale
     gray = image.convert('L')
@@ -25,7 +25,7 @@ def IntensityLevelSlicing():
 
 def IntensityLevelResolution():
     # Load the image
-    im = Image.open('image.jpg')
+    im = Image.open('image.png')
 
     # Convert the image to grayscale
     im_gray = im.convert('L')
@@ -56,7 +56,7 @@ def IntensityLevelResolution():
 
 def NegativeImage():
     # Load the image
-    image = Image.open('image.jpg')
+    image = Image.open('image.png')
 
     # Invert the intensity values
     inverted_image = Image.eval(image, lambda x: 255 - x)
@@ -67,7 +67,7 @@ def NegativeImage():
 
 def GreylevelTransformation():
     # Load the image
-    image = Image.open('image.jpg').convert('L')
+    image = Image.open('image.png').convert('L')
 
     # Define the contrast stretch function
     def contrast_stretch(intensity):
@@ -82,7 +82,7 @@ def GreylevelTransformation():
 
 def LinearSpatialFilter():
     # Open the input image
-    image = Image.open('image.jpg')
+    image = Image.open('image.png')
 
     # Convert the image to grayscale
     image = image.convert('L')
@@ -122,7 +122,7 @@ def LinearSpatialFilter():
 
 def LogarithmicTransformation():
     # Load the image
-    image = Image.open('image.jpg')
+    image = Image.open('image.png')
 
     # Apply a logarithmic transformation to the image
     image_log = image.point(lambda x: np.log(x + 1))
